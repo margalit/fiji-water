@@ -1,0 +1,80 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>FIJI Water Presents: Earth’s Finest Morning</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css"
+</head>
+<body>
+  <video preload="yes" class="video" autoplay loop poster="./beach.jpg">
+    <source src="./beach.mp4" type="video/mp4" />
+    <source src="./beach.webm" type="video/webm" />
+    <source src="./beach.ogv" type="video/ogg" />
+    <img src="./beach.jpg">
+  </video>
+  <div class="content">
+    <h2 class="mb1">FIJI Water presents</h2>
+    <h1 class="blue bold f1">Earth’s Finest Morning</h1>
+    <h3 class="blue bold mb2">With Tim Robards and Anna Heinrich</h3>
+    <p>
+      FIJI Water is bringing a slice of tropical paradise to Sydney for one weekend only with Earth’s Finest Morning – an exclusive, free Saturday morning retreat for the body and soul.<br/>
+      <a class="blue link" href="#" data-toggle>Read more</a>
+    </p>
+    <div class="modal" data-modal>
+      <div class="modal-content" data-modal-content>
+        <p>Join Sydney’s favourite couple, Tim Robards and Anna Heinrich, for an intimate morning of fitness and nutrition at the FIJI Water Weekender, popping up at one of Sydney’s most stunning private residences in Darling Point.</p>
+        <p>Throw on your active wear and we will take care of the rest – this is your time to put the worries of the week behind you and kick off your weekend on the right note.</p>
+        <p>For the first time ever, Tim and Anna will work together to present a fitness collaboration that will put guests through their paces in an exclusive workout session before hosting a delicious and nutritious brunch – all set to a stunning backdrop of harbour views.</p>
+        <p>If the weather is kind, we recommend packing your bathers and of course we’ll have plenty of FIJI Water on hand to keep you hydrated!</p>
+        <h2 class="bold mb1">Tickets</h2>
+        <p>This exclusive retreat is a free ticketed event but like all good things, places are strictly limited. Register your interest now to go into the ballot to receive tickets for you and a friend.</p>
+        <p>Tickets are strictly limited. Register your interest for you and a friend to attend by filling in your details below. Successful applicants will be selected by ballot and will be notified via email on Wednesday 15th March.</p>
+        <h2 class="bold mb1">More Information</h2>
+        <p>Please email your queries to libby@keepleft.com.au. FAQs can be viewed here.</p>
+        <h2 class="bold mb1">About FIJI Water</h2>
+        <p>FIJI™ Water, natural artesian water bottled at the source in Viti Levu (Fiji islands), is the No. 1 imported bottled water in the United States. FIJI Water, known for its iconic square bottle, soft mouth feel and unique mineral profile, is the water of choice among discerning consumers and top chefs.  Widely available at fine restaurants, hotels, and all major retail channels, FIJI Water has expanded globally to more than 60 countries. To discover Earth’s Finest Water™, please visit www.fijiwater.com.au and like us on Facebook.</p>
+      </div>
+    </div>
+    <p class="mb1">
+      <span class="bold blue f3 mb3">Saturday 25th March</span></br>
+      <span class="blue f3 mb3">9am – 12noon</span></br>
+      <span class="bold blue f3 mb3">FIJI Water Weekender @ Darling Point<br/>
+      <span class="blue f3">A secret location to be revealed to attendees prior to the event. You will not be disappointed!</span>
+    </p>
+    <form action="http://keepleft.createsend.com/t/d/s/ptthhd/" method="post" id="subForm">
+      <input id="fieldName" placeholder="Name" name="cm-name" type="text" />
+      <input id="fieldEmail" placeholder="Email" name="cm-ptthhd-ptthhd" type="email" required />
+      <label class="f4"><input class="checkbox" type="checkbox" required/>I accept the <a href="#" class="link blue f4">terms and conditions</a></label>
+      <p>
+        <button type="submit">Enter</button>
+      </p>
+    </form>
+    <div>
+      <a href="#" class="link">
+        <img class="social" src="facebook.png" />
+      </a>
+      <a href="#" class="link">
+        <img class="social" src="instagram.png" />
+      </a>
+      <a href="#" class="link">
+        <img class="social" src="twitter.png" />
+      </a>
+    </div>
+  </div>
+  <script src="http://localhost:35729/livereload.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var toggle = document.querySelector("[data-toggle]")
+    var modal = document.querySelector("[data-modal]")
+    var modalContent = document.querySelector("[data-modal-content]")
+    function toggleModal() {
+      modal.classList.toggle("is-open")
+    }
+    function stopPropagation(evt) {
+      evt.stopPropagation()
+    }
+    toggle.addEventListener("click", toggleModal)
+    modal.addEventListener("click", toggleModal)
+    modalContent.addEventListener("click", stopPropagation)
+  </script>
+</body>
+</html>
