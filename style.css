@@ -11,21 +11,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-body:after {
-  background-image: url('bg.png');
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: "";
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center left;
-  opacity: 0;
-  pointer-events: none;
-}
-
 p {
   line-height: 1.5;
   margin-bottom: 2.8vh;
@@ -67,6 +52,7 @@ button {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2vh;
+  cursor: pointer;
 }
 
 .link {
@@ -76,14 +62,13 @@ button {
 
 .video {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
+  right: 0;
+  bottom: 0;
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
-  transform: translate(-50%, -50%);
+  z-index: -100;
 }
 
 .content {
@@ -154,8 +139,36 @@ button {
   cursor: initial;
 }
 
+.footer {
+  display: flex;
+  align-items: center;
+}
+
 .social {
   width: 4.3vh;
   height: 4.3vh;
   margin-right: 1vh;
+}
+
+.social-links {
+  margin-left: 2vh;
+}
+
+.social-link {
+  margin-right: 1vh;
+  float: right;
+}
+
+.hand {
+  position: absolute;
+  bottom: 0;
+  height: 95vh;
+  left: calc(70vh + 15%);
+}
+
+.logo {
+  position: absolute;
+  right: 5vh;
+  top: 5vh;
+  width: 12vh;
 }
