@@ -6,9 +6,13 @@
   -webkit-font-smoothing: antialiased;
 }
 
+
 body {
   padding: 5vh;
   font-family: 'Montserrat', sans-serif;
+  min-width: 160vh;
+  height: 100vh;
+  position: relative;
 }
 
 p {
@@ -31,6 +35,24 @@ input.checkbox {
   margin-right: 1vh;
 }
 
+input[type=checkbox] {
+  width: 1.5vh;
+  height: 1.5vh;
+  padding: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  background: white;
+  border-radius: 0.25vh;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type=checkbox]:checked {
+  background-image: url('checkmark.svg');
+  background-size: cover;
+}
+
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: rgb(0,94,184);
 }
@@ -49,6 +71,7 @@ button {
   color: white;
   border: 0;
   width: 80%;
+  margin-top: 1.5vh;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2vh;
@@ -76,7 +99,7 @@ button {
   background-color: rgba(0,44,85,0.7);
   color: white;
   padding: 6.5vh 4.58vh 4.58vh;
-  width: 64vh;
+  width: 65vh;
 }
 
 .blue {
@@ -163,7 +186,7 @@ button {
   position: absolute;
   bottom: 0;
   height: 95vh;
-  left: calc(70vh + 15%);
+  right: 0;
 }
 
 .logo {
