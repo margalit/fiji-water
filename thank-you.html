@@ -1,0 +1,77 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FIJI Water Presents: Earth’s Finest Morning</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css"
+</head>
+<body>
+  <video class="video" playsinline autoplay muted loop poster="./beach.jpg">
+    <source src="./beach.webm" type="video/webm" />
+    <source src="./beach.mp4" type="video/mp4" />
+    <source src="./beach.ogv" type="video/ogg" />
+  </video>
+  <img src="hand.png" class="hand"/>
+  <img src="fiji-water-logo.svg" class="logo"/>
+  <div class="content">
+    <h2 class="mb1">FIJI Water presents</h2>
+    <h1 class="blue bold f1">Earth’s Finest Morning</h1>
+    <h3 class="blue bold mb2">With Tim Robards and Anna Heinrich</h3>
+    <p>
+      Thank you. Your registration to win a double pass to FIJI Water present Earth’s Finest Morning has been confirmed. Successful entrants will be notified on 17th March 2017 via email.
+    </p>
+    <div class="footer">
+      <a href="https://www.facebook.com/FIJIWaterAU/?brand_redir=48766343893" class="link">
+        <img class="social" src="facebook.png" />
+      </a>
+      <a href="https://www.instagram.com/fijiwaterau/?hl=en" class="link">
+        <img class="social" src="instagram.png" />
+      </a>
+      <div class="social-links">
+        <a class="link blue social-link" href="http://fijiwater.com.au/">FIJI Water Website</a>
+        <a class="link blue social-link" href="http://fijiwater.com.au/store-locator/">Store Locator</a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    [].forEach.call(
+      document.querySelectorAll("[data-open]"),
+      function(button) {
+        button.addEventListener("click", function(evt) {
+          evt.preventDefault()
+          var target = button.dataset.open;
+          [].forEach.call(
+            document.querySelectorAll("[data-modal]"),
+            function(modal) {
+              if (modal.dataset.modal === target) {
+                modal.classList.add('is-open')
+              } else {
+                modal.classList.remove('is-open')
+              }
+            }
+          );
+        })
+      }
+    );
+    [].forEach.call(
+      document.querySelectorAll("[data-modal]"),
+      function(modal) {
+        modal.addEventListener("click", function(evt) {
+          evt.preventDefault();
+          modal.classList.remove('is-open')
+        })
+      }
+    );
+    [].forEach.call(
+      document.querySelectorAll("[data-modal-content]"),
+      function(content) {
+        content.addEventListener("click", stopPropagation)
+      }
+    );
+    function stopPropagation(evt) {
+      evt.stopPropagation()
+    };
+  </script>
+</body>
+</html>
